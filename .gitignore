@@ -1,2 +1,4 @@
 #token and api keys
 .env
+#node modules
+**node_modules/
