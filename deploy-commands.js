@@ -23,16 +23,19 @@ const rest = new REST({ version: '9' }).setToken(token);
 (async () => {
 	try {
 		console.log('Started refreshing slash commands.')
-
-		await rest.put(
-			Routes.applicationGuildCommands(clientId, guildId),
-			{ body: commands },
-		)
-		await rest.put(
-			Routes.applicationCommands(clientId),
-			{ body: commands },
-		)
-
+		if (!guildId) {
+			await rest.put(
+				Routes.applicationCommands(clientId),
+				{ body: commands },
+			)
+			console.log('Successfully registered slash commands globally')
+		} else {
+			await rest.put(
+				Routes.applicationGuildCommands(clientId, guildId),
+				{ body: commands },
+			)
+			console.log('Successfully registered slash commands locally')
+		}
 		console.log('Successfully reloaded slash commands.')
 	} catch (error) {
 		console.error(error)
