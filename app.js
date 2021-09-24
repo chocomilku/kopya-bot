@@ -1,5 +1,6 @@
 require('dotenv').config()
-const { Client, Intents, Interaction } = require("discord.js");
+const fs = require('fs')
+const { Client, Intents, Interaction, Collection } = require("discord.js");
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
@@ -8,15 +9,30 @@ client.once("ready", () => {
     console.log(`Ready!\n${client.user.tag} is Online`)
 })
 
+client.commands = new Collection()
+const commandFiles = fs.readdirSync('./commands')
+  .filter(file => 
+    file.endsWith('.js')
+    )
+
+for (const file of commandFiles) {
+  const command = require(`./commands/${file}`)
+  client.commands.set(command.data.name, command)
+}
+
+
 client.on('interactionCreate', async interaction => {
   if (!interaction.isCommand()) return;
 
-  const { command } = interaction;
+  const command = client.commands.get(interaction.commandName)
 
-  if (command === "kopya") {
-    await interaction.reply('wip')
-  } else if (command === "info") {
-    await interaction.reply("kopyahan Bot")
+  if (!command) return
+
+  try {
+    await command.execute(interaction);
+  } catch (error) {
+    console.error(error)
+    await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true })
   }
 
 })
