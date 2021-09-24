@@ -13,12 +13,10 @@ client.on('interactionCreate', async interaction => {
 
   const { command } = interaction;
 
-  if (command === "ping") {
-    await interaction.reply('Pong!')
-  } else if (command === "server") {
-    await interaction.reply(`Server Info:\n Server Name: ${interaction.guild.name}\n Total Members: ${interaction.guild.memberCount}`)
-  } else if (command === "user") {
-    await interaction.reply(`Your tag: ${interaction.user.tag}`)
+  if (command === "kopya") {
+    await interaction.reply('wip')
+  } else if (command === "info") {
+    await interaction.reply("kopyahan Bot")
   }
 
 })

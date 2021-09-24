@@ -7,9 +7,8 @@ const guildId = process.env.guildId
 const token = process.env.TOKEN
 
 const commands = [
-	new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
-	new SlashCommandBuilder().setName('server').setDescription('Replies with server info!'),
-	new SlashCommandBuilder().setName('user').setDescription('Replies with user info!'),
+	new SlashCommandBuilder().setName('kopya').setDescription('Searches to brainly.ph from your query.'),
+	new SlashCommandBuilder().setName('info').setDescription('All information about this bot.')
 ]
 	.map(command => command.toJSON());
 
