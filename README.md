@@ -1,1 +1,7 @@
-"# kopya-bot" 
+# kopya-bot
+
+## Config
+
+```
+token=TOKEN
+```
