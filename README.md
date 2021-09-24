@@ -2,6 +2,9 @@
 
 ## Config
 
+.env file
 ```
-token=TOKEN
+TOKEN=
+clientId=
+guildId=
 ```
