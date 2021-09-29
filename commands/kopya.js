@@ -9,6 +9,6 @@ module.exports = {
                 .setDescription('Search Question')
                 .setRequired(true)),
     async execute(interaction) {
-        await interaction.reply('wip')
+        await interaction.reply(interaction.options.getString('search'))
     }
 }
