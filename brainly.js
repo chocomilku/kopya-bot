@@ -14,12 +14,15 @@ const search = async (query) => {
             return brain.search(country, q)
         }
 
-        if (question === "" || question ===  null || question === undefined) {
+        if (query === "" || query ===  null || query === undefined) {
             return "Not A Valid Question"
         } else {
             const res = await search(query)
+            console.log(res)
         }
     } catch (err) {
-        return `An error occurred:\n${err}`
+        console.error(err)
     }
 }
+
+search('Algebra')
