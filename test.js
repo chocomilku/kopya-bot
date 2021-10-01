@@ -50,8 +50,6 @@ const start = async function(question) {
     }
 }
 
-start("ano ang BTS")
-
 function find(query) {
     return brain.search('ph', query)
 }

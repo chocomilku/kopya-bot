@@ -18,7 +18,13 @@ const search = async (query) => {
             return "Not A Valid Question"
         } else {
             const res = await search(query)
-            console.log(res)
+            for (let i = 0; i < res.length; i++) {
+                let q = `${i}. Question: ${res[i].question.content}`
+                for (let x = 0; x < res[i].answers.length; x++) {
+                    let a = `${i}. Answer: ${res[i].answers[x].content}`
+                }
+                console.log(`${removeTags(q)}\n${removeTags(a)}\n`)
+            }
         }
     } catch (err) {
         console.error(err)
