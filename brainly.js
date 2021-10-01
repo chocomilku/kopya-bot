@@ -1,6 +1,7 @@
 const Brainly = require("brainly-scraper-v2")
 const brain = new Brainly("ph")
 const country = 'ph'
+const fs = require('fs')
 
 const search = async (query) => {
     try {
@@ -19,6 +20,13 @@ const search = async (query) => {
         } else {
             const res = await search(query)
             console.log(JSON.stringify(res))
+            fs.writeFile("brainly.test.json", JSON.stringify(res), 'utf-8', (err) => {
+                if (err) {
+                    console.log('An error occured')
+                    return console.log(err)
+                }
+                console.log("JSON file has been saved")
+            })
         }
     } catch (err) {
         console.error(err)
