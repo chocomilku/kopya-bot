@@ -33,4 +33,4 @@ const search = async (query) => {
     }
 }
 
-search('Algebra')
+search('A rectangular box is 5 cm long . 3 cm wide and 4 cm high . find its surface area . ')
