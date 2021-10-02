@@ -11,7 +11,10 @@ module.exports = {
                 .setDescription('Search Question')
                 .setRequired(true)),
     async execute(interaction) {
-        const data = search(interaction.options.getString('search'))
+        const query = interaction.options.getString('search')
+        let ans;
+        const res = search(query)
+        const data = async ()
           const embed = new MessageEmbed()
             .setColor('#34B785')
             .setTitle('kopya-bot')
