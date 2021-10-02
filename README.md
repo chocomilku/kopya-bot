@@ -13,9 +13,9 @@ guildId=
 
 #### /kopya (Answer Here without these parentheses)
 
-```/kopya how earth is formed```\
+```/kopya how earth is formed```
 
-this will return an embed with information you need.
+this will return an embed with information you need.\
 returns: 
 - your query
 - the question got from the scraper
