@@ -1,13 +1,12 @@
 const { search } = require('../brainly')
 
-let data = search('math')
-let ans;
-
-const e = async () => {
-    const a = await data
-    ans = a
+const find = async (q) => {
+    return search(q)
 }
 
-e()
+const use = async (query) => {
+    const res = await find(query)
+    console.log(`Question: ${res.question}\nQuestion By: ${res.questionAuthor}\nSubject: ${res.subject}\nGrade: ${res.grade}\nLink: ${res.link}\nAnswer: ${res.answerFormatted}\n Answer Author ID: ${res.answerAuthorId}\nLast Activity: ${res.lastActivity}`)
+}
 
-console.log(ans)
+use('algae')
