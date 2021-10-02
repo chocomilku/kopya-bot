@@ -12,9 +12,6 @@ module.exports = {
                 .setRequired(true)),
     async execute(interaction) {
         const query = interaction.options.getString('search')
-        let ans;
-        const res = search(query)
-        const data = async ()
           const embed = new MessageEmbed()
             .setColor('#34B785')
             .setTitle('kopya-bot')
