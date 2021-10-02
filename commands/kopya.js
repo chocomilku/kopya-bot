@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders')
 const { MessageEmbed } = require('discord.js')
+const { search } = require('../brainly')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -10,6 +11,7 @@ module.exports = {
                 .setDescription('Search Question')
                 .setRequired(true)),
     async execute(interaction) {
+        const data = search(interaction.options.getString('search'))
           const embed = new MessageEmbed()
             .setColor('#34B785')
             .setTitle('kopya-bot')
