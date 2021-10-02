@@ -4,6 +4,7 @@ const { Client, Intents, Interaction, Collection } = require("discord.js");
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
+const { search } = require('./brainly')
 
 client.once("ready", () => {
     console.log(`Ready!\n${client.user.tag} is Online`)

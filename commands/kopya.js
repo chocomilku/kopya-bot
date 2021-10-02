@@ -12,6 +12,7 @@ module.exports = {
                 .setRequired(true)),
     async execute(interaction) {
         const query = interaction.options.getString('search')
+        await interaction.reply('Please wait...')
         const res = await search(query)
           const embed = new MessageEmbed()
             .setColor('#34B785')
@@ -27,6 +28,10 @@ module.exports = {
                 {name: 'Question Link', value: res.link, inline: true},
                 {name: 'Answer', value: res.answerFormatted},
             )
-            await interaction.reply({ embeds: [embed] })
+            if (res === 'Error') {
+                await interaction.editReply('An Error Occured. Please retry again.')
+            } else {
+                await interaction.editReply({ content: 'Thanks for Waiting!', embeds: [embed] })
+            }
     }
 }
