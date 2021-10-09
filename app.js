@@ -31,7 +31,7 @@ client.on('interactionCreate', async interaction => {
     await command.execute(interaction);
   } catch (error) {
     const d = new Date();
-    console.error(`${d.toLocaleString()}: ${error}`)
+    console.error(`${d.toLocaleString()}: ${error} [${interaction.options.getString('search')}]`)
     const embedError = new MessageEmbed()
       .setColor('#ff0033')
       .setTitle(`${error}`)
