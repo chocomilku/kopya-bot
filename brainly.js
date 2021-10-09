@@ -20,7 +20,7 @@ module.exports = {
             } else {
                 const res = await search(query)
                 if (res[0] == null || res[0] == undefined) {
-                    return await Promise.reject(new Error("No Results Received."));
+                    return await Promise.reject(new Error("No Results."));
                 } else {
                     let data = {"question": res[0].question.content, "questionAuthor": res[0].question.author.username, "subject": res[0].question.education, "grade": res[0].question.grade, "link": `https://brainly.ph/question/${res[0].question.id}`, "answerFormatted": removeTags(res[0].answers[0].content), "answerAuthorId": res[0].answers[0].author.id, "lastActivity": res[0].question.lastActivity}
                     return data

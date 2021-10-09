@@ -1,6 +1,6 @@
 require('dotenv').config()
 const fs = require('fs')
-const { Client, Intents, Collection } = require("discord.js");
+const { Client, Intents, Collection, MessageEmbed } = require("discord.js");
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
@@ -30,8 +30,13 @@ client.on('interactionCreate', async interaction => {
   try {
     await command.execute(interaction);
   } catch (error) {
-    console.error(`${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}: ${error}`)
-    await interaction.editReply({ content: `An Error has Occured. Please try Again\n${error}`})
+    const d = new Date();
+    console.error(`${d.toLocaleString()}: ${error}`)
+    const embedError = new MessageEmbed()
+      .setColor('#ff0033')
+      .setTitle(`${error}`)
+      .setTimestamp(d)
+    await interaction.editReply({ content: `An Error has Occured. Please try again`, embeds: [embedError]})
   }
 
 })
