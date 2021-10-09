@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders')
 const { MessageEmbed } = require('discord.js')
+const { pagination } = require('reconlx')
 
 module.exports = {
     data: new SlashCommandBuilder()
