@@ -33,8 +33,8 @@ module.exports = {
                     {name: 'Answer', value: res.answerFormatted},
                 )
                 await interaction.editReply({ content: `Thanks for Waiting!`, embeds: [embed] })
-            } catch (err) {
-                await interaction.editReply(`An Error has Occured. Please try Again.\n${err}`)
+            } catch (error) {
+                throw new Error(error)
             }
         }
         

@@ -1,13 +1,12 @@
 require('dotenv').config()
 const fs = require('fs')
-const { Client, Intents, Interaction, Collection } = require("discord.js");
+const { Client, Intents, Collection } = require("discord.js");
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
-const { search } = require('./brainly')
 
 client.once("ready", () => {
-    console.log(`Ready!\n${client.user.tag} is Online`)
+    console.log(`Ready!\n${client.user.tag} is Online\nCTRL+C to Stop`)
 })
 
 client.commands = new Collection()
@@ -31,8 +30,8 @@ client.on('interactionCreate', async interaction => {
   try {
     await command.execute(interaction);
   } catch (error) {
-    console.error(error)
-    await interaction.editReply({ content: `An Error has Occured. Please try Again\n${error}`, ephemeral: true })
+    console.error(`${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}: ${error}`)
+    await interaction.editReply({ content: `An Error has Occured. Please try Again\n${error}`})
   }
 
 })
