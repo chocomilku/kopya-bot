@@ -5,8 +5,8 @@
     "brainly-scraper-v2": "^2.0.4-1",
     "discord-api-types": "^0.23.1",
     "discord.js": "^13.1.0",
-    "dotenv": "^10.0.0",
-    "reconlx": "^2.4.3"
+    "discordjs-button-pagination": "^2.0.1",
+    "dotenv": "^10.0.0"
   },
   "main": "app.js"
 }
