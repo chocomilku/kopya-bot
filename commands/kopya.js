@@ -14,7 +14,11 @@ module.exports = {
         const query = interaction.options.getString('search')
         await interaction.reply('Please wait...')
         const res = await search(query)
-        if (res.question.length > 1024) {
+        let totalLength = 0;
+        for (const el of Object.values(res)) {
+            totalLength += el.length;
+        }
+        if (totalLength > 1024) {
             await interaction.editReply(`Question reached Discord's embed character limit. Here's the Link instead\n${res.link}`)
         } else {
             try {
