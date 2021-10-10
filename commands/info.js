@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders')
 const { MessageEmbed, MessageButton } = require('discord.js')
 const paginationEmbed = require('discordjs-button-pagination')
+const info = require('../constants')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -8,19 +9,21 @@ module.exports = {
         .setDescription('All information about this bot.'),
     async execute(interaction) {
         const embed = new MessageEmbed()
-            .setColor('WHITE')
+            .setColor(info.color[1])
             .setTitle('Commands')
-            .setAuthor('kopyahan Bot', 'https://cdn.discordapp.com/embed/avatars/0.png', 'https://github.com/chocomilku/kopya-bot')
+            .setAuthor(info.name, info.picURL, info.url)
             .addFields(
                 {name: '/kopya', value: 'Searches your question to brainly.ph and returns the answer'},
                 {name: '/info', value: 'Shows this Embed for all information about this bot'},
             )
         const embed2 = new MessageEmbed()
-            .setColor('WHITE')
+            .setColor(info.color[1])
             .setTitle('Changelog')
-            .setAuthor('kopyahan Bot', 'https://cdn.discordapp.com/embed/avatars/0.png', 'https://github.com/chocomilku/kopya-bot')
+            .setAuthor(info.name, info.picURL, info.url)
             .addFields(
-                {name: 'v0.8', value: 'added pagination'},
+                {name: 'v0.9.1', value: 'updated code'},
+                {name: 'v0.9', value: 'added markdown styling'},
+                {name: 'v0.8', value: 'added pagination to info'},
                 {name: 'v0.7', value: 'added embeds to errors\nadded this versioning'},
                 {name: 'v0.6', value: 'added error handling'},
                 {name: 'v0.5', value: 'replies answer to the user'},
@@ -28,12 +31,12 @@ module.exports = {
             )
 
         const embed3 = new MessageEmbed()
-            .setColor('WHITE')
+            .setColor(info.color[1])
             .setTitle('About')
-            .setAuthor('kopyahan Bot', 'https://cdn.discordapp.com/embed/avatars/0.png', 'https://github.com/chocomilku/kopya-bot')
+            .setAuthor(info.name, info.picURL, info.url)
             .addFields(
-                {name: 'Author', value: 'chocomilku#0437'},
-                {name: 'Github Link', value: 'https://github.com/chocomilku/kopya-bot'},
+                {name: 'Author', value: info.authorDiscord},
+                {name: 'Github Link', value: info.url},
             )
         
         const button1 = new MessageButton()

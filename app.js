@@ -1,5 +1,6 @@
 require('dotenv').config()
 const fs = require('fs')
+const info = require('./constants')
 const { Client, Intents, Collection, MessageEmbed } = require("discord.js");
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
@@ -33,8 +34,9 @@ client.on('interactionCreate', async interaction => {
     const d = new Date();
     console.error(`${d.toLocaleString()}: ${error} [${interaction.options.getString('search')}]`)
     const embedError = new MessageEmbed()
-      .setColor('#ff0033')
+      .setColor(info.color[2])
       .setTitle(`${error}`)
+      .setAuthor(info.name, info.picURL, info.url)
       .setTimestamp(d)
     await interaction.editReply({ content: `An Error has Occured. Please try again`, embeds: [embedError]})
   }

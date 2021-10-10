@@ -1,6 +1,8 @@
 const { SlashCommandBuilder } = require('@discordjs/builders')
 const { MessageEmbed } = require('discord.js')
 const { search } = require('../brainly')
+const info = require('../constants')
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('kopya')
@@ -22,9 +24,9 @@ module.exports = {
         } else {
             try {
                 const embed = new MessageEmbed()
-                .setColor('#34B785')
-                .setTitle('kopya-bot')
-                .setDescription(`"${interaction.options.getString('search')}"`)
+                .setColor(info.color[0])
+                .setTitle(`> ${query}`)
+                .setAuthor(info.name, info.picURL, info.url)
                 .setTimestamp(res.lastActivity)
                 .setFooter(`Answered by userID: ${res.answerAuthorId}`)
                 .addFields(
