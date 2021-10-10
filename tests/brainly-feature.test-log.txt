@@ -1,17 +1,6 @@
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
 [
-  0,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 0,
     question: 'ANO ANG BUONG PANGALAN NI JOSE RIZAL??<br />A:JOSE PROTACIO RIZAL<br />B:JOSE PROTACIO RIZAL MERCADO Y REALONDA <br />C:JOSE RIZAL<br 
 />D:JOSE PEPE RIZAL​',
     answer: '<p><strong>Answer:</strong></p><p>B. Po ata hehe</p><p><strong>Explanation:</strong></p><p> CORRECT ME IF I AM WRONG PO Im not sure kase eh eehe </p><p></p>',
@@ -24,9 +13,8 @@
     lastActivity: '2021-09-22T02:30:53.000Z',
     closed: true
   },
-  1,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 1,
     question: 'how jose rizal died <br />what time jose rizal died<br />what month rizal died<br />what is the full name of rizal.​',
     answer: '<p> </p><p>1.he was killed by firing squad</p><p>2.6 a.m.</p><p>3.December 29</p><p>4.José Protacio Rizal Mercado y Alonso Realonda</p><p></p>',
     questionAuthor: 'arnuldasi21',
@@ -38,9 +26,8 @@
     lastActivity: '2021-09-23T09:06:38.000Z',
     closed: true
   },
-  2,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 2,
     question: "Qualities that both Rizal<br />and his students possess<br />Qualities of<br />Rizal<br />Qualities of<br />Rizal's students​",       
     answer: '<p>Answer:</p><p>Nationalism</p><p>Explanation:</p><p></p>',
     questionAuthor: 'grandearianna20',
@@ -52,9 +39,8 @@
     lastActivity: '2021-05-14T07:50:00.000Z',
     closed: true
   },
-  3,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 3,
     question: 'qualities of rizal <br /><br /><br />what is that both rizal and his students passes <br /><br /><br />qualities of rizal students​', 
     answer: '<p><strong>Answer:</strong></p><p>As a leader, Rizal was transformational, charismatic, visionary, and most importantly, incorruptible. 
 He displayed a kind of leadership that was not motivated by personal interest but the willingness to sacrifice oneself for the good of the majority which he described in his novels as the national sentiment.</p><p><strong>Explanation:</strong></p><p></p>',
@@ -67,9 +53,8 @@ He displayed a kind of leadership that was not motivated by personal interest bu
     lastActivity: '2021-09-29T07:26:51.000Z',
     closed: true
   },
-  4,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 4,
     question: 'rizal wind farm pililla rizal',
     answer: "<p><strong>Answer:</strong></p><p>ano pong question?</p><p><strong>Explanation:</strong></p><p>what's the question</p>",
     questionAuthor: 'microgang5232',
@@ -81,9 +66,8 @@ He displayed a kind of leadership that was not motivated by personal interest bu
     lastActivity: '2021-07-04T06:33:52.000Z',
     closed: true
   },
-  5,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 5,
     question: 'differentiate the historic rizal and symbolic rizal<br />',
     answer: '<p>si doctor jose rizal sya ang bayani ng Pilipinas</p>',
     questionAuthor: 'genesussanchez71',
@@ -95,9 +79,8 @@ He displayed a kind of leadership that was not motivated by personal interest bu
     lastActivity: '2021-10-10T08:17:46.000Z',
     closed: false
   },
-  6,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 6,
     question: ' story The turtle and Monkey written by Jose Rizal what could be the inspiration of rizal Rizal in writing?​',
     answer: '<h3><strong>sorry</strong><strong> </strong><strong><em>diko</em></strong><strong><em> </em></strong><strong><em><u>po</u></em></strong><strong><em><u> </u></em></strong><strong><em><u>alam</u></em></strong><strong><em><u> </u></em></strong><strong><em><u>sa</u></em></strong><strong><em><u> </u></em></strong><strong><em><u>iba</u></em></strong><strong><em><u> </u></em></strong><strong><em><u>kana</u></em></strong><strong><em><u> </u></em></strong><strong><em><u>lng</u></em></strong><strong><em><u> </u></em></strong><strong><em><u>tumingin</u></em></strong><strong><em><u> </u></em></strong><strong><em><u>ng</u></em></strong><strong><em><u> </u></em></strong><strong><em><u>sagot</u></em></strong><strong><em><u> </u></em></strong></h3>',
     questionAuthor: 'piav7794',
@@ -109,9 +92,8 @@ He displayed a kind of leadership that was not motivated by personal interest bu
     lastActivity: '2021-06-03T06:34:42.000Z',
     closed: true
   },
-  7,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 7,
     question: 'Who is Padre Faura in the life of Jose Rizal?<br />A. teacher of Dr. Jose Rizal<br />B. enemy of Dr. Jose Rizal<br />C. father of Dr. 
 Jose Rizal<br />D. neighbor of Dr. Jose Rizal​',
     answer: '<p><strong>Answer</strong><strong>:</strong></p><p><strong>d</strong><strong>.</strong></p><p><strong>Explanation:</strong></p><p>dko alam kung tama yan</p>',
@@ -124,9 +106,8 @@ Jose Rizal<br />D. neighbor of Dr. Jose Rizal​',
     lastActivity: '2021-10-03T10:45:49.000Z',
     closed: true
   },
-  8,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 8,
     question: 'ano ang buong pangalan ni Rizal?<br /><br />A. Jose Rizal<br />B. Jose P. Rizal<br />C. Jose Protacio Rizal<br />D. B &amp; C<br />​',
     answer: '<p><strong>Answer:</strong></p><p>José Protacio Rizal Mercado y Alonso Realonda</p><p><strong>Explanation:</strong></p><p>:-) </p>',    
     questionAuthor: 'jazningwen',
@@ -138,9 +119,8 @@ Jose Rizal<br />D. neighbor of Dr. Jose Rizal​',
     lastActivity: '2021-10-09T23:48:17.000Z',
     closed: true
   },
-  9,
   {
-    index: { question: [Object], answers: [Array] },
+    index: 9,
     question: 'Rizal Wind Farm sa Pililla,Rizal​',
     answer: '<p><strong>Answer:</strong></p><p>The humming of the car engine was just about to lull us to sleep when I spotted a giant white fan sticking out in the distance. All of a sudden, everyone was alive, scanning the horizon, watching out for more.</p><p></p><p>If I didn’t know exactly where we were at the moment, I would easily assume we had reached Bangui in Ilocos Norte. But we were just driving for over an hour from Paete, Laguna, 
 making our way back to Manila. And this place isn’t along the shores of Ilocandia but in the highlands of Rizal. Outside Ilocos Norte, it is the first of its kind in Luzon.</p><p></p><p>Located in the humble barangay of Halayhayin in Pililla, to be more precise, the Rizal Wind Farm is the newest addition to the growing list of tourism hotspots within close proximity of the capital, just two hours away. According to Alternergy Wind One Corp, the company that leads the operations of the farm, Pililla is an ideal setting for a wind farm because “it is part of a natural wind corridor created by the unique geographical features surrounding the lake.”</p><p></p><p>A lane of 27 wind turbines stand atop sloping hills at 300 meters above sea level, towering over Laguna de Bay and standing along the NW-SE line to capture the Amihan from October to March, whose speeds can reach 36km/hour. Each turbine can produce 2MW. The entire farm is estimated to be able to generate almost 150 Gigawatt hours of electricity every year.</p><p></p><p><strong>Explanation:</strong></p><p> sana maka tulong</p><p></p>',
