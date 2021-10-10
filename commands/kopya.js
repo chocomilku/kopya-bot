@@ -21,6 +21,8 @@ module.exports = {
         }
         if (totalLength > 1024) {
             await interaction.editReply(`Question reached Discord's embed character limit. Here's the Link instead\n${res.link}`)
+            const d = new Date();
+            console.error(`${d.toLocaleString()}: Embed limit. Currently ${totalLength} [${query}]`)
         } else {
             try {
                 const embed = new MessageEmbed()
