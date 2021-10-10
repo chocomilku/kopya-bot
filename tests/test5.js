@@ -1,0 +1,3 @@
+const { toMarkdown } = require('../toMarkdown')
+
+console.log(toMarkdown('<p><strong>Answer:</strong></p><p><strong><u><em>94 cm²</em></u></strong></p><p><strong>Step-by-step explanation:</strong></p><p>l = 5</p><p>w = 3</p><p>h = 4</p><p><strong>Formula:</strong></p><p>2lw + 2wh + 2lh</p><p><strong>Substitute:</strong></p><p>2 (5 × 3) + 2 (3 × 4) + 2 (5 × 4)</p><p><strong>Solve:</strong></p><p>2 (5 × 3) + 2 (3 × 4) + 2 (5 × 4)</p><p>2 (15) + 2 (12) + 2 (20)</p><p>30 + 24 + 40</p><p><u><em>94</em></u></p>'))

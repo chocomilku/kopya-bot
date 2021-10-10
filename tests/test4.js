@@ -1,7 +1,7 @@
 const Brainly = require("brainly-scraper-v2")
 const brain = new Brainly("ph")
 const country = 'ph'
-
+const {toMarkdown} = require('../toMarkdown')
 
 const search = async function(query) {
     try {
@@ -9,6 +9,10 @@ const search = async function(query) {
             if ((str === null) || (str === "")) return false
             else str = str.toString()
             return str.replace(/(<([^>]+)>)/ig, '')
+        }
+
+        function tM(str) {
+            return toMarkdown(str)
         }
 
         function search(q) {
@@ -19,17 +23,14 @@ const search = async function(query) {
             return await Promise.reject(new Error("Not A Valid Question!"));
         } else {
             const res = await search(query)
-            if (res[0] == null || res[0] == undefined) {
-                return await Promise.reject(new Error("No Results."));
-            } else {
-                console.log(res.length)
-                let data = {"question": res[0].question.content, "questionAuthor": res[0].question.author.username, "subject": res[0].question.education, "grade": res[0].question.grade, "link": `https://brainly.ph/question/${res[0].question.id}`, "answerFormatted": removeTags(res[0].answers[0].content.toString()), "answerAuthorId": res[0].answers[0].author.id.toString(), "lastActivity": res[0].question.lastActivity}
-                return data
-            }
+            console.log(res.length)
+            let data = {"question": tM(res[0].question.content), "questionAuthor": res[0].question.author.username, "subject": res[0].question.education, "grade": res[0].question.grade, "link": `https://brainly.ph/question/${res[0].question.id}`, "answerFormatted": removeTags(res[0].answers[0].content.toString()),"answer": tM(res[0].answers[0].content.toString()) , "answerAuthorId": res[0].answers[0].author.id.toString(), "lastActivity": res[0].question.lastActivity}
+            console.log(data)
+            return data
         }
-    } catch (err) {
-        return await Promise.reject(new Error(err));
+    } catch (error) {
+        throw new Error(error)
     }
 }
 
-search('china')
+search('A rectangular box is 5 cm long, 3 cm wide and 4 cm high. Find its surface area.')

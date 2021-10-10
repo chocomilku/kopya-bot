@@ -1,7 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders')
 const { MessageEmbed } = require('discord.js')
 const { search } = require('../brainly')
-
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('kopya')
