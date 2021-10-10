@@ -16,23 +16,36 @@ async function BrainlySearch(query, len = 10) {
             function fill(index) {
                 const n = res[index]
                 const q = n.question
-                const a = n.answers[0]
-                return {
-                'index': index, 
-                'question': q.content, 
-                'answer': a.content, 
-                'questionAuthor': q.author.username, 
-                'questionAuthorId': q.author.id, 
-                'questionId': q.id, 
-                'subject': q.education, 
-                'grade': q.grade, 
-                'answerAuthorId': a.author.id, 
-                'lastActivity': q.lastActivity, 
-                'closed': q.closed
+                const a = n.answers
+
+                function allAnswers() {
+                    let re = []
+                    for (let i = 0; i < a.length; i++) {
+                        const answers = {
+                            'index': i,
+                            'answer': a[i].content,
+                            'answerAuthorId': a[i].author.id
+                        }
+                        re.push(answers)
+                    }
+                    return re
                 }
+
+                const toReturn = {
+                    'index': index, 
+                    'question': q.content, 
+                    'questionAuthor': q.author.username, 
+                    'questionAuthorId': q.author.id, 
+                    'questionId': q.id, 
+                    'subject': q.education, 
+                    'grade': q.grade, 
+                    'lastActivity': q.lastActivity, 
+                    'closed': q.closed,
+                    'answers': allAnswers()
+                }
+                return toReturn
             }
             for (let i = 0; i < res.length; i++) {
-                console.log(i)
                 let append = fill(i)
                 data.push(append)
             }
