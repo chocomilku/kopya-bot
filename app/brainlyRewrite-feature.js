@@ -1,7 +1,7 @@
 const country = 'ph'
 const Brainly = require('brainly-scraper-v2')
 const brain = new Brainly(country)
-const { toMarkdown } = require('./toMarkdown')
+const { toMarkdown } = require('../toMarkdown')
 
 module.exports = {
      BrainlySearch: async (query, len = 10) => {
