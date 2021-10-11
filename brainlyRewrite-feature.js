@@ -12,7 +12,7 @@ module.exports = {
                 const n = res[index]
                 const q = n.question
                 const a = n.answers
-    
+
                 function allAnswers() {
                     let re = []
                     for (let i = 0; i < a.length; i++) {

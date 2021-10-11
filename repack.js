@@ -2,6 +2,7 @@ const { BrainlySearch } = require('./brainlyRewrite-feature')
 
 const repackage = async (query, length = 10) => {
     const res = await BrainlySearch(query, length)
+    console.log(Object.values(res[0]).length)
     let eachTotalLength = []
     for (let i = 0; i < res.length; i++) {
         let totalLength = 0
